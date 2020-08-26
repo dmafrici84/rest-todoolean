@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>rest - todoolean</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--scala e no zoom versione mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <!-- Template -->
+    <script id="template" type="text/x-handlebars-template"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#"><h2>TODOOLEAN</h2></a>
+        </div>
+        <div class="aggiungi-nav">
+          <ul>
+            <li>
+                <input id="input-aggiungi" type="text" name="cerca" value="" placeholder="Cose da fare">
+            </li>
+            <li><button id="btn-aggiungi" type="button" name="button">Aggiungi</button></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="contenitore">
+        <h1 id="Planning">Planning</h1>
+        <ul id="lista-planning"></ul>
+      </div>
+    </main>
+  </body>
+</html>

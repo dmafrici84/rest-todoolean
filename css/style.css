@@ -1,0 +1,144 @@
+/* impostazioni generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #4e889c;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #60abc4;
+}
+
+header nav {
+  width: 95%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 95%;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo h2 {
+  font-size: 30px;
+  color:#e50914;
+}
+
+.aggiungi-nav  > ul {
+  display: flex;
+  list-style: none;
+}
+
+.aggiungi-nav  > ul li {
+  margin-right: 20px;
+}
+
+#input-aggiungi {
+  width: 250px;
+  padding: 4px 12px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #dde8ed;
+  color: rgb(46, 58, 70);
+}
+
+#btn-aggiungi {
+  width: 100px;
+  padding: 4px 12px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: solid 1px #dde8ed;
+  font-family: Roboto, sans-serif;
+  background-color: #4e889c;
+  color: #dde8ed;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-aggiungi:hover {
+  background-color: #dde8ed;
+  color: #1E2D3B;
+  border-color: #1E2D3B;
+  transition: .4s;
+}
+
+
+/* main */
+.contenitore {
+  width: 95%;
+  margin: 120px auto 20px;
+}
+
+.contenitore h1 {
+  color: #dde8ed;
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+
+#lista-planning .compito {
+  margin-left: 50px;
+  line-height: 3;
+  font-size: 25px;
+  color: #dde8ed;
+  cursor: pointer;
+}
+
+.elimina {
+  width: 30%;
+  border-radius: 4px;
+  background-color: #dde8ed;
+  color: #1E2D3B;
+  text-align: center;
+  display: none;
+}
+
+.elimina span {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.btn-elimina {
+  width: 100px;
+  padding: 4px 12px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #e50914;
+  color: #dde8ed;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.btn-elimina:hover {
+  background-color: rgba(229, 9, 20, 0.5);
+  transition: .4s;
+}
+
+#lista-planning .compito:hover .elimina{
+  display: block;
+}
