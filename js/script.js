@@ -19,11 +19,11 @@ $(document).ready(init);
         target.text("");
         for (var i = 0; i < data.length; i++) {
           var compito = data[i];
-          target.append(`<li class="compito">
+          target.append(`<li class="compito" data-id="${compito.id}">
           ${compito.text}
           <div class="elimina">
             <span>Davvero vuoi eliminarlo dalla tua lista?</span>
-            <button class="btn-elimina"  data-id="${compito.id}"type="button" name="button">Elimina</button>
+            <button class="btn-elimina" type="button" name="button">Elimina</button>
           </div>
           </li>`);
         }
@@ -80,7 +80,8 @@ $(document).ready(init);
 
   function eliminaCompito() {
     var btnElimina = $(this);
-    var id = btnElimina.data("id");
+    var id = btnElimina.parents(".compito").data("id");
+    console.log(id);
     $.ajax({
       url: `http://157.230.17.132:3013/todos/${id}`,
       method: "DELETE",
