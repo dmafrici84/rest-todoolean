@@ -4,9 +4,9 @@ $(document).ready(init);
 
 // FUNZIONI
   function init(){
+    stampaPlanning();
     clicKAggiungi();
     keyupInput();
-    stampaPlanning();
     clickElimina();
   }
 
@@ -38,7 +38,12 @@ $(document).ready(init);
 
   function clicKAggiungi() {
     var btnCerca = $("#btn-aggiungi");
-    btnCerca.click(aggiungiCompito);
+    btnCerca.click(function verificaImput(){
+      var input = $("#input-aggiungi").val();
+      if (input.length > 0) {
+        aggiungiCompito(input);
+      }
+    });
   }
 
   function keyupInput() {
@@ -48,14 +53,13 @@ $(document).ready(init);
 
   function sendKeyupInput(event) {
     var tasto = event.which;
-    var input = $ (this).val();
+    var input = $(this).val();
     if (tasto == 13 && input.length > 0) {
-      aggiungiCompito();
+      aggiungiCompito(input);
     }
   }
 
-  function  aggiungiCompito() {
-    var nuovoCompito = $("#input-aggiungi").val();
+  function  aggiungiCompito(nuovoCompito) {
     $("#input-aggiungi").val("");
     $.ajax({
       url: "http://157.230.17.132:3013/todos",
